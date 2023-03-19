@@ -1,3 +1,6 @@
+// because we've already defined a sequelize instance
+// in index.js, we can require '../index' instead here
+// which will connect to our sequelize instance
 const sequelize = require('sequelize');
 
 //import models so that we can associate them in one file 
@@ -26,6 +29,9 @@ sequelize.sync({ force: true })
     console.error('Unable to sync the database', err);
   });
 
+  // I appreciate this comment! Consider reaching out to 
+  // a peer or coach in the helpdesk, or during one 
+  // of our office hours/squad time for more details on these topics.
 
   //I am not sure about Eager loading or testing in general I might have to make some extra time to get
   //some additional help with these concepts 
